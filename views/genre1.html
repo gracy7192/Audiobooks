@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horror Audiobooks - Cask & Quill</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: papayawhip;
+            color: #8a0808;
+        }
+
+        header {
+            background-color: #8a0808;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .genre-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .genre-title h2 {
+            color: #8a0808;
+            font-size: 2em;
+        }
+
+        .audiobook-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .audiobook-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .audiobook-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .audiobook-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .audiobook-item h3 {
+            margin: 15px 0 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .audiobook-item button {
+            background-color: #8a0808;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .audiobook-item button:hover {
+            background-color: #8a0808;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #8a0808;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cask & Quill</h1>
+    </header>
+
+    <div class="container">
+        <div class="genre-title">
+            <h2>Dive into the Darkness</h2>
+            <p>Explore the most chilling and spine-tingling horror audiobooks.</p>
+        </div>
+
+        <div class="audiobook-list">
+            <!-- Audiobook Item -->
+            <div class="audiobook-item">
+                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.1.png" alt="Audiobook 1">
+                <h3>The Power of Now</h3>
+                <button onclick="showDetails('The Haunting of Hill House')">More Details</button>
+            </div>
+
+            <div class="audiobook-item">
+                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.2.png" alt="Audiobook 2">
+                <h3>Becoming Supernatural</h3>
+                <button onclick="showDetails('It by Stephen King')">More Details</button>
+            </div>
+
+            <div class="audiobook-item">
+                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.3.png" alt="Audiobook 3">
+                <h3>The Untethered Soul</h3>
+                <button onclick="showDetails('Dracula')">More Details</button>
+            </div>
+
+            <div class="audiobook-item">
+                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.4.png" alt="Audiobook 4">
+                <h3>Awakening the Mind</h3>
+                <button onclick="showDetails('The Shining')">More Details</button>
+            </div>
+            <div class="audiobook-item">
+                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.5.png" alt="Audiobook 5">
+                <h3>The Haunted</h3>
+                <button onclick="showDetails('The Haunted')">More Details</button>
+            </div>
+            <div class="audiobook-item">
+                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.6.png"alt="Audiobook 6">
+                <h3>The Red Room</h3>
+                <button onclick="showDetails('The Red Room')">More Details</button>
+            </div>
+            <div class="audiobook-item">
+                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.7.png"alt="Audiobook 7">
+                <h3>Hidden Pictures</h3>
+                <button onclick="showDetails('Hidden Pictures')">More Details</button>
+            </div>
+            <div class="audiobook-item">
+                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.8.png"alt="Audiobook 8">
+                <h3>Shakti</h3>
+                <button onclick="showDetails('The Call Of Cthulhu')">More Details</button>
+            </div>
+            <!-- More items can be added here -->
+        </div>
+    </div>
+
+
+    <script>
+        function showDetails(title) {
+            alert(`More details about "${title}" coming soon!`);
+        }
+    </script>
+</body>
+</html>
