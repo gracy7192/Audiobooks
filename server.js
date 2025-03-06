@@ -9,9 +9,8 @@ const errorHandler = require("./middlewares/errorHandler");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger);
-
 app.use(express.static(path.join(__dirname, "public")));
-
+app.use(errorHandler);
 const apiRoutes = require("./api/apiRoutes");
 app.use("/api", apiRoutes);
 
@@ -48,15 +47,6 @@ app.get("/api/genre2", (req, res) => {
 app.get("/api/register", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "register.html"));
 });
-
-app.use(errorHandler);
-
-
-// app.get("/api/fiction", (req, res) => {
-//     const filePath = path.join(__dirname, "views", "fiction.html");
-//     console.log("Serving file from:", filePath);
-//     res.sendFile(filePath);
-// });
 
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);

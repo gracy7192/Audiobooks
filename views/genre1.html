@@ -3,173 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horror Audiobooks - Cask & Quill</title>
+    <title>Horror Books - Cask & Quill</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            background-color: papayawhip;
-            color: #8a0808;
-        }
-
-        header {
-            background-color: #8a0808;
-            color: white;
-            padding: 15px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        .genre-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .genre-title h2 {
-            color: #8a0808;
-            font-size: 2em;
-        }
-
-        .audiobook-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .audiobook-item {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-            padding: 15px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .audiobook-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .audiobook-item img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
-        .audiobook-item h3 {
-            margin: 15px 0 10px;
-            font-size: 1.2em;
+            background-color: #f9f5eb;
             color: #333;
         }
-
-        .audiobook-item button {
-            background-color: #8a0808;
-            color: white;
-            border: none;
+        .navbar {
+            background-color: #7d1a1a;
             padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
         }
-
-        .audiobook-item button:hover {
-            background-color: #8a0808;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
+        .navbar .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
             color: white;
-            margin-top: 40px;
         }
-
-        footer a {
-            color: #8a0808;
+        .navbar a {
+            color: white;
             text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
         }
-
-        footer a:hover {
+        .navbar a:hover {
             text-decoration: underline;
+        }
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f9f5eb;
+        }
+        .header h1 {
+            color: #3d3d3d;
+            font-size: 2.5rem;
+        }
+        .header p {
+            color: #7d1a1a;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .book-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        .book-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .book-card h3 {
+            margin: 15px 0;
+            color: #3d3d3d;
+            font-size: 1.2rem;
+        }
+        .book-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+        .footer {
+            background-color: #7d1a1a;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Cask & Quill</h1>
-    </header>
-
-    <div class="container">
-        <div class="genre-title">
-            <h2>Dive into the Darkness</h2>
-            <p>Explore the most chilling and spine-tingling horror audiobooks.</p>
-        </div>
-
-        <div class="audiobook-list">
-            <!-- Audiobook Item -->
-            <div class="audiobook-item">
-                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.1.png" alt="Audiobook 1">
-                <h3>The Power of Now</h3>
-                <button onclick="showDetails('The Haunting of Hill House')">More Details</button>
-            </div>
-
-            <div class="audiobook-item">
-                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.2.png" alt="Audiobook 2">
-                <h3>Becoming Supernatural</h3>
-                <button onclick="showDetails('It by Stephen King')">More Details</button>
-            </div>
-
-            <div class="audiobook-item">
-                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.3.png" alt="Audiobook 3">
-                <h3>The Untethered Soul</h3>
-                <button onclick="showDetails('Dracula')">More Details</button>
-            </div>
-
-            <div class="audiobook-item">
-                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.4.png" alt="Audiobook 4">
-                <h3>Awakening the Mind</h3>
-                <button onclick="showDetails('The Shining')">More Details</button>
-            </div>
-            <div class="audiobook-item">
-                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.5.png" alt="Audiobook 5">
-                <h3>The Haunted</h3>
-                <button onclick="showDetails('The Haunted')">More Details</button>
-            </div>
-            <div class="audiobook-item">
-                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.6.png"alt="Audiobook 6">
-                <h3>The Red Room</h3>
-                <button onclick="showDetails('The Red Room')">More Details</button>
-            </div>
-            <div class="audiobook-item">
-                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.7.png"alt="Audiobook 7">
-                <h3>Hidden Pictures</h3>
-                <button onclick="showDetails('Hidden Pictures')">More Details</button>
-            </div>
-            <div class="audiobook-item">
-                <img src="C:\Users\siya1\OneDrive\Desktop\Audiobook\horror img.8.png"alt="Audiobook 8">
-                <h3>Shakti</h3>
-                <button onclick="showDetails('The Call Of Cthulhu')">More Details</button>
-            </div>
-            <!-- More items can be added here -->
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">Cask & Quill</div>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Benefits</a>
+            <a href="#">Chapters</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
         </div>
     </div>
 
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Dive into the Darkness</h1>
+        <p>Explore the most chilling and spine-tingling horror audiobooks.</p>
+    </div>
 
-    <script>
-        function showDetails(title) {
-            alert(`More details about "${title}" coming soon!`);
-        }
-    </script>
+    <!-- Books Section -->
+    <div class="books-grid">
+        <div class="book-card">
+            <img src="https://d3knv99tpa4iwv.cloudfront.net/bcz-png/png24-front/bookcover0025821.jpg" alt="Book Cover">
+            <h3>The Sykamore Leaves</h3>
+            <p>Golden letters on a dark canvas. A haunting promise.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://d3knv99tpa4iwv.cloudfront.net/bcz-png/png24-front/bookcover0014800.jpg" alt="Book Cover">
+            <h3>Strangers Of The Night</h3>
+            <p>The whispers grow louder. The night calls. Are you brave enough to answer?.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://d3knv99tpa4iwv.cloudfront.net/bcz-png/png24-front/bookcover0020826.jpg" alt="Book Cover">
+            <h3>These Delusion Solitude</h3>
+            <p>A chilling whisper from the depths.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://d3knv99tpa4iwv.cloudfront.net/bcz-png/png24-front/bookcover0023634.jpg" alt="Book Cover">
+            <h3>The Light And Shadow</h3>
+            <p>Whispers of the afterlife.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://d3knv99tpa4iwv.cloudfront.net/bcz-png/png24-front/bookcover0026305.jpg" alt="Book Cover">
+            <h3>The Cradel Night</h3>
+            <p>A chilling prelude. Innocence shattered.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://d3knv99tpa4iwv.cloudfront.net/bcz-png/png24-front/bookcover0030023.jpg" alt="Book Cover">
+            <h3>Veil Of Darkness</h3>
+            <p>Whispers of dread echo in the decaying halls.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://d3knv99tpa4iwv.cloudfront.net/bcz-png/png24-front/bookcover0025070.jpg" alt="Book Cover">
+            <h3>The Demonic Skies</h3>
+            <p>Blood-soaked pages, a tale of terror unfolds.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://d3knv99tpa4iwv.cloudfront.net/bcz-png/png24-front/bookcover0032559.jpg" alt="Book Cover">
+            <h3>The Gloomy Forest</h3>
+            <p>The forest's secrets yearn to be unveiled. Embrace the darkness.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://d3knv99tpa4iwv.cloudfront.net/bcz-png/png24-front/bookcover0032576.jpg" alt="Book Cover">
+            <h3>Veil Of The Phantom</h3>
+            <p>Bare branches, silent crows, and a story untold. The veil hides a haunting truth.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://d3knv99tpa4iwv.cloudfront.net/bcz-png/png24-front/bookcover0033024.jpg" alt="Book Cover">
+            <h3>The Fight Of Giants</h3>
+            <p>The fight for survival, etched in blood and desire. A tale of giants.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://d3knv99tpa4iwv.cloudfront.net/bcz-png/png24-front/bookcover0005842.jpg" alt="Book Cover">
+            <h3>Memories Of Dead</h3>
+            <p>The air grows thick with dread. A silent promise of horror.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://d3knv99tpa4iwv.cloudfront.net/bcz-png/png24-front/bookcover0024712.jpg" alt="Book Cover">
+            <h3>The Crying Diary</h3>
+            <p>Beneath the gnarled branches, secrets weep. The diary's truth, a chilling sleep.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Cask & Quill. All rights reserved.</p>
+    </div>
 </body>
 </html>

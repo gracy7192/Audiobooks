@@ -649,110 +649,145 @@
         </div>
       </section>
      
-
-
-
-
       <!-- 
         - #CONTACT
       -->
 
-      <section class="section contact" id="contact" aria-label="contact">
-        <div class="container">
-
+      <section
+      class="section contact"
+      id="contact"
+      aria-label="contact"
+  >
+      <div class="container">
           <p class="section-subtitle">Contact</p>
 
           <h2 class="h2 section-title has-underline">
-            Write me anything
-            <span class="span has-before"></span>
+              Write me anything
+              <span class="span has-before"></span>
           </h2>
 
           <div class="wrapper">
+              <form class="contact-form">
+                  <input
+                      type="text"
+                      name="name"
+                      id="name_input"
+                      placeholder="Your Name"
+                      required
+                      class="input-field"
+                  />
 
-            <form action="" class="contact-form">
+                  <input
+                      type="email"
+                      name="email_address"
+                      id="email_input"
+                      placeholder="Your Email"
+                      required
+                      class="input-field"
+                  />
 
-              <input type="text" name="name" placeholder="Your Name" required class="input-field">
+                  <input
+                      type="text"
+                      name="subject"
+                      id="subject_input"
+                      placeholder="Subject"
+                      required
+                      class="input-field"
+                  />
 
-              <input type="email" name="email_address" placeholder="Your Email" required class="input-field">
+                  <textarea
+                      name="message"
+                      id="message_input"
+                      placeholder="Your Message"
+                      class="input-field"
+                  ></textarea>
 
-              <input type="text" name="subject" placeholder="Subject" required class="input-field">
+                  <button id="submit-btn" class="btn btn-primary">
+                      Send Now
+                  </button>
+              </form>
 
-              <textarea name="message" placeholder="Your Message" class="input-field"></textarea>
-
-              <button type="submit" class="btn btn-primary">Send Now</button>
-
-            </form>
-
-            <ul class="contact-card">
-
-              <li>
-                <p class="card-title">Address:</p>
-
-                <address class="address">
-                  192, 46B <br>
-                  Chandigarh, India 160047
-                </address>
-              </li>
-
-              <li>
-                <p class="card-title">Phone:</p>
-
-                <a href="tel:1234567890" class="card-link">123 456 7890</a>
-              </li>
-
-              <li>
-                <p class="card-title">Email:</p>
-
-                <a href="mailto:support@support.com" class="card-link">support@support.com</a>
-              </li>
-
-              <li>
-                <p class="social-list-title h3">Connect book socials</p>
-
-                <ul class="social-list">
-
+              <ul class="contact-card">
                   <li>
-                    <a href="#" class="social-link">
-                      <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
+                      <p class="card-title">Address:</p>
+
+                      <address class="address">
+                          192, 46B <br />
+                          Chandigarh, India 160047
+                      </address>
                   </li>
 
                   <li>
-                    <a href="#" class="social-link">
-                      <ion-icon name="logo-twitter"></ion-icon>
-                    </a>
+                      <p class="card-title">Phone:</p>
+
+                      <a href="tel:1234567890" class="card-link"
+                          >123 456 7890</a
+                      >
                   </li>
 
                   <li>
-                    <a href="#" class="social-link">
-                      <ion-icon name="logo-linkedin"></ion-icon>
-                    </a>
+                      <p class="card-title">Email:</p>
+
+                      <a
+                          href="mailto:support@support.com"
+                          class="card-link"
+                          >support@support.com</a
+                      >
                   </li>
 
                   <li>
-                    <a href="#" class="social-link">
-                      <ion-icon name="logo-youtube"></ion-icon>
-                    </a>
+                      <p class="social-list-title h3">
+                          Connect book socials
+                      </p>
+
+                      <ul class="social-list">
+                          <li>
+                              <a href="#" class="social-link">
+                                  <ion-icon
+                                      name="logo-facebook"
+                                  ></ion-icon>
+                              </a>
+                          </li>
+
+                          <li>
+                              <a href="#" class="social-link">
+                                  <ion-icon
+                                      name="logo-twitter"
+                                  ></ion-icon>
+                              </a>
+                          </li>
+
+                          <li>
+                              <a href="#" class="social-link">
+                                  <ion-icon
+                                      name="logo-linkedin"
+                                  ></ion-icon>
+                              </a>
+                          </li>
+
+                          <li>
+                              <a href="#" class="social-link">
+                                  <ion-icon
+                                      name="logo-youtube"
+                                  ></ion-icon>
+                              </a>
+                          </li>
+
+                          <li>
+                              <a href="#" class="social-link">
+                                  <ion-icon
+                                      name="logo-whatsapp"
+                                  ></ion-icon>
+                              </a>
+                          </li>
+                      </ul>
                   </li>
-
-                  <li>
-                    <a href="#" class="social-link">
-                      <ion-icon name="logo-whatsapp"></ion-icon>
-                    </a>
-                  </li>
-
-                </ul>
-              </li>
-
-            </ul>
-
+              </ul>
           </div>
-
-        </div>
-      </section>
-
-    </article>
-  </main>
+      </div>
+  </section>
+</article>
+</main>
 
 
 
@@ -810,7 +845,7 @@
 
 
 
-<script>
+<!-- <script>
     document
         .getElementById("contactForm")
         .addEventListener("submit", async (e) => {
@@ -855,9 +890,53 @@
                 window.location.href = "/login";
             }
         }
-    });
+    }); 
 </script>
+-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("submit-btn");
 
+      const name_input = document.getElementById("name_input");
+      const email_input = document.getElementById("email_input");
+      const subject_input = document.getElementById("subject_input");
+      const message_input = document.getElementById("message_input");
+
+      btn.addEventListener("click", async (e) => {
+          e.preventDefault();
+
+          const formData = {
+              name: name_input.value,
+              email: email_input.value,
+              subject: subject_input.value,
+              message: message_input.value,
+          };
+
+          try {
+              const response = await fetch("/api/contact", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(formData),
+              });
+
+              if (response.ok) {
+                  alert("Your message has been sent successfully!");
+                  name_input.value = "";
+                  email_input.value = "";
+                  subject_input.value = "";
+                  message_input.value = "";
+              } else {
+                  alert(
+                      "Failed to send your message. Please try again."
+                  );
+              }
+          } catch (error) {
+              console.error("Error:", error);
+              alert("An error occurred. Please try again later.");
+          }
+      });
+  });
+</script>
 <!-- 
 - custom js link
 -->

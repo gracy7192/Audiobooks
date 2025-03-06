@@ -3,173 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spiritual Audiobooks - Cask& Quill</title>
+    <title>Spiritual Books - Cask & Quill</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            background-color: papayawhip;
-            color: #8a0808;
-        }
-
-        header {
-            background-color: #8a0808;
-            color: white;
-            padding: 15px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        .genre-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .genre-title h2 {
-            color: #8a0808;
-            font-size: 2em;
-        }
-
-        .audiobook-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .audiobook-item {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-            padding: 15px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .audiobook-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .audiobook-item img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
-        .audiobook-item h3 {
-            margin: 15px 0 10px;
-            font-size: 1.2em;
+            background-color: #f9f5eb;
             color: #333;
         }
-
-        .audiobook-item button {
-            background-color: #8a0808;
-            color: white;
-            border: none;
+        .navbar {
+            background-color: #7d1a1a;
             padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
         }
-
-        .audiobook-item button:hover {
-            background-color: #8a0808;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
+        .navbar .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
             color: white;
-            margin-top: 40px;
         }
-
-        footer a {
-            color: #054a8a;
+        .navbar a {
+            color: white;
             text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
         }
-
-        footer a:hover {
+        .navbar a:hover {
             text-decoration: underline;
+        }
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f9f5eb;
+        }
+        .header h1 {
+            color: #3d3d3d;
+            font-size: 2.5rem;
+        }
+        .header p {
+            color: #7d1a1a;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .book-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        .book-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .book-card h3 {
+            margin: 15px 0;
+            color: #3d3d3d;
+            font-size: 1.2rem;
+        }
+        .book-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+        .footer {
+            background-color: #7d1a1a;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Cask & Quill</h1>
-    </header>
-
-    <div class="container">
-        <div class="genre-title">
-            <h2>Enrich Your Mind and Spirit</h2>
-            <p>Discover a curated collection of spiritual audiobooks to inspire and uplift your soul.</p>
-        </div>
-
-        <div class="audiobook-list">
-            <!-- Audiobook Item -->
-            <div class="audiobook-item">
-                <img src="/images/image1.png" alt="Audiobook 1">
-                <h3>Hinduism</h3>
-                <button onclick="showDetails('Hinduism')">More Details</button>
-            </div>
-
-            <div class="audiobook-item">
-                <img src="/images/img.2.png" alt="Audiobook 2">
-                <h3>Krishna</h3>
-                <button onclick="showDetails('Krishna')">More Details</button>
-            </div>
-
-            <div class="audiobook-item">
-                <img src="/images/img.3.png" alt="Audiobook 3">
-                <h3>Greek Mythology</h3>
-                <button onclick="showDetails('Greek Mythology')">More Details</button>
-            </div>
-
-            <div class="audiobook-item">
-                <img src="/images/img.4.png" alt="Audiobook 4">
-                <h3>Awakening the Mind</h3>
-                <button onclick="showDetails('Awakening the Mind')">More Details</button>
-            </div>
-            <div class="audiobook-item">
-                <img src="/images/img.5.png" alt="Audiobook 5">
-                <h3>The Crusades</h3>
-                <button onclick="showDetails('The Crusades')">More Details</button>
-            </div>
-            <div class="audiobook-item">
-                <img src="/images/img.6.png"alt="Audiobook 6">
-                <h3>Mysticism and Miraclrs</h3>
-                <button onclick="showDetails('Mysticism and Miraclrs ')">More Details</button>
-            </div>
-            <div class="audiobook-item">
-                <img src="/images/img.7.png"alt="Audiobook 7">
-                <h3>Upanishads</h3>
-                <button onclick="showDetails('Upanishads')">More Details</button>
-            </div>
-            <div class="audiobook-item">
-                <img src="/images/img.8.png" alt="Audiobook 8">
-                <h3>Shakti</h3>
-                <button onclick="showDetails('Shakti')">More Details</button>
-            </div>
-            <!-- More items can be added here -->
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">Cask & Quill</div>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Benefits</a>
+            <a href="#">Chapters</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
         </div>
     </div>
 
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Enrich Your Mind and Spirit</h1>
+        <p>Discover a curated collection of spiritual audiobooks to inspire and uplift your soul.</p>
+    </div>
 
-    <script>
-        function showDetails(title) {
-            alert(`More details about "${title}" coming soon!`);
-        }
-    </script>
+    <!-- Books Section -->
+    <div class="books-grid">
+        <div class="book-card">
+            <img src="https://d3knv99tpa4iwv.cloudfront.net/bcz-png/png24-front/bookcover0030895.jpg" alt="Book Cover">
+            <h3>The Field Of Freedom</h3>
+            <p>Focusing on Hope and Liberation.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1309287434i/38210.jpg" alt="Book Cover">
+            <h3>The Art Of Happiness</h3>
+            <p>Emphasizing the Ethereal and Spiritual.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://images4.penguinrandomhouse.com/cover/9780143133803" alt="Book Cover">
+            <h3>Tao Te Ching</h3>
+            <p>Dive deep into the essence of existence.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1689947880i/6708.jpg" alt="Book Cover">
+            <h3>The Power Of Now</h3>
+            <p>A guide to living in the present.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://bookcoverexpress.com/wp-content/uploads/2020/03/spiritual-book-cover-waythere-1-1-400x600.webp" alt="Book Cover">
+            <h3>The Way Of There</h3>
+            <p>Seeing the journey through, one step at a time.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1669038629i/63376691.jpg" alt="Book Cover">
+            <h3>Mahagatha</h3>
+            <p>Dive into the Puranas, where gods and mortals intertwine.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629378189i/52036.jpg" alt="Book Cover">
+            <h3>Siddhartha</h3>
+            <p>Find your inner peace. Embrace the journey of self-discovery.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1592316004i/54120792.jpg" alt="Book Cover">
+            <h3>Bhagavad Gita</h3>
+            <p>Facing the battlefield of life, find strength in the Gita.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1176433520i/129603.jpg" alt="Book Cover">
+            <h3>You Can Heal Your Life</h3>
+            <p>Unleash your inner sunshine! Embrace the power within to heal your life.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1707466651i/208010351.jpg" alt="Book Cover">
+            <h3>The Echoes of Enigma</h3>
+            <p>Illuminating Life's Profound Akashic Mysteries.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1440111652i/56495.jpg" alt="Book Cover">
+            <h3>The Purpose Driven Life</h3>
+            <p>What on Earth Am I Here for?.</p>
+        </div>
+        <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320481647i/104909.jpg" alt="Book Cover">
+            <h3>The Book of Secrets</h3>
+            <p>Unlocking the Hidden Dimensions of Your Life.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Cask & Quill. All rights reserved.</p>
+    </div>
 </body>
 </html>
